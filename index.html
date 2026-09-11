@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    
+    <!-- === HIGH-LEVEL SEO FOR SAVEMEDIAS.COM === -->
+    <title>SaveMedias - High-Speed Movie Mirror | Official MovieLinkBD Partner</title>
+    <meta name="description" content="SaveMedias is the premium mirror server of MovieLinkBD. Download latest Bollywood, Hollywood, Bangla Dubbed movies and Web Series in HD for free.">
+    <meta name="keywords" content="SaveMedias, MovieLinkBD, Save Medias Official, Download Movies, Bangla Dubbed Movies, Bollywood HD Movies, Free Movie Download">
+    <meta property="og:title" content="SaveMedias - Watch Latest HD Movies">
+    <meta property="og:description" content="Official mirror for MovieLinkBD. Fast and secure downloads.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=1200&h=630&auto=format&fit=crop">
+    <link rel="canonical" href="https://savemedias.com" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root { --bg: #0f0f0f; --red: #e50914; --cyan: #00bcd4; --green: #4caf50; --card: #161a1d; }
+        body { background-color: #1a1a1a; color: white; font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; text-align: center; }
+        
+        /* Original Branding Header */
+        header { padding: 45px 10px 20px; background: #000; border-bottom: 4px solid var(--red); box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+        .save-logo { font-size: 24px; font-weight: 700; color: var(--red); text-transform: uppercase; margin: 0; letter-spacing: 4px; }
+        .collab-text { font-size: 11px; color: #888; margin: 12px 0 5px; font-weight: bold; letter-spacing: 1px; }
+        .movie-logo { font-size: clamp(45px, 12vw, 75px); font-weight: 900; color: var(--red); margin: 0; text-transform: uppercase; letter-spacing: -2px; }
+        .status-text { color: var(--green); font-size: 15px; font-weight: bold; margin-top: 10px; }
+
+        /* Buttons Grid - Fixed Adjustments */
+        .nav-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 10px; max-width: 1750px; margin: 25px auto; padding: 0 20px; }
+        .btn { background: var(--red); color: white; padding: 16px 20px; border-radius: 8px; text-decoration: none; font-size: 13px; font-weight: 800; text-transform: uppercase; cursor: pointer; border: none; transition: 0.3s; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+        .btn:hover { background: #fff; color: var(--red); transform: translateY(-5px); }
+        .btn-orange { background: #ff9800; }
+
+        /* Ad Banner Top */
+        #ad-top-slot { margin: 25px auto; max-width: 728px; min-height: 90px; border: 1px solid #333; background: #000; }
+
+        /* Slider Section (13 Posters) */
+        .upcoming-section { background: #000; padding: 35px 0; margin: 25px 0; }
+        .up-scroll { display: flex; overflow-x: auto; gap: 20px; padding: 0 35px; scrollbar-width: none; }
+        .up-scroll::-webkit-scrollbar { display: none; }
+        .up-card { min-width: 190px; position: relative; background: #111; border-radius: 15px; overflow: hidden; cursor: pointer; border: 1px solid #222; transition: 0.4s; }
+        .up-card:hover { border-color: var(--cyan); transform: scale(1.05); }
+        .up-card img { width: 100%; height: 270px; object-fit: cover; opacity: 0.75; }
+        .up-badge { position: absolute; top: 0; left: 0; background: #ffc107; color: #000; font-size: 12px; font-weight: 900; padding: 6px 12px; border-radius: 0 0 15px 0; }
+        .up-title { position: absolute; bottom: 0; width: 100%; background: linear-gradient(transparent, rgba(0,0,0,0.9)); font-size: 13px; padding: 10px 0; font-weight: bold; }
+
+        /* Search Form (Referrer Killer Method) */
+        .search-container { max-width: 950px; margin: 50px auto; display: flex; padding: 0 25px; }
+        .search-container input { flex: 1; background: #000; border: 3px solid var(--cyan); padding: 22px; color: white; border-radius: 12px 0 0 12px; outline: none; font-size: 20px; }
+        .search-container button { background: var(--cyan); border: none; width: 100px; color: white; border-radius: 0 12px 12px 0; cursor: pointer; font-size: 32px; transition: 0.3s; }
+
+        .special-pills { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-bottom: 40px; }
+        .sp-pill { padding: 15px 35px; border-radius: 50px; font-size: 15px; font-weight: 800; color: white; cursor: pointer; border: none; }
+
+        .rules-btn { background: #8d6e63; padding: 20px 45px; border-radius: 12px; color: white; font-weight: 900; margin-bottom: 50px; cursor: pointer; border: none; font-size: 18px; }
+        .section-header { color: var(--green); font-size: 36px; font-weight: 900; border-bottom: 5px solid var(--green); display: inline-block; padding-bottom: 15px; margin-bottom: 40px; }
+
+        /* HUGE MOVIE CARDS (Monitor Gap Fix) */
+        .movie-container { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); 
+            gap: 35px; max-width: 1950px; margin: 0 auto; padding: 30px; 
+        }
+        .movie-card { background: var(--card); border-radius: 20px; overflow: hidden; position: relative; cursor: pointer; border: 1px solid #222; transition: 0.5s; }
+        .movie-card:hover { transform: scale(1.05); border-color: var(--red); box-shadow: 0 20px 40px rgba(0,0,0,0.8); }
+        .movie-card img { width: 100%; aspect-ratio: 2/3; object-fit: cover; display: block; }
+        .b-left { position: absolute; top: 15px; left: 15px; background: #ffc107; color: #000; font-size: 13px; font-weight: 900; padding: 5px 12px; border-radius: 8px; }
+        .b-right { position: absolute; top: 15px; right: 15px; background: #0d47a1; color: #fff; font-size: 13px; font-weight: bold; padding: 5px 12px; border-radius: 8px; }
+        .m-title { padding: 25px 15px; font-size: 18px; font-weight: bold; color: #fff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; background: linear-gradient(to top, #000, transparent); }
+
+        .footer-notice { background-color: #080a10; border: 1px solid #1a202c; padding: 40px; max-width: 1300px; margin: 40px auto; text-align: left; border-radius: 15px; }
+
+        /* Pagination - Very Bottom */
+        .pagination { display: flex; justify-content: center; gap: 15px; margin: 60px 0 100px; flex-wrap: wrap; }
+        .pagination a { background: #222; color: #fff; padding: 18px 28px; text-decoration: none; border-radius: 10px; font-size: 20px; font-weight: bold; cursor: pointer; }
+        .pagination a.active { background: #007bff; }
+
+        @media (max-width: 600px) { .movie-container { grid-template-columns: repeat(2, 1fr); gap: 15px; padding: 15px; } .movie-logo { font-size: 50px; } }
+    </style>
+
+    <script>
+    // ১. সচল ডোমেইন এবং স্মার্টলিঙ্ক
+    var _db = "https://movielinkbd" + ".tv"; 
+    var _sl = "https://www.effective" + "cpmnetwork.com/kw76b1im?key=99d2e29818306d0bafc2567069c59903";
+    var testMode = false; // নিজে চেক করার সময় true রাখুন (অ্যাড বন্ধ থাকবে)
+
+    // রেফারার লুকিয়ে রিডাইরেক্ট করার ফাংশন (সার্চ এবং মুভি উভয়ের জন্য)
+    function safeRedirect(url) {
+        if (!testMode) { 
+            window.open(_sl, '_blank'); 
+        }
+        
+        // এই ট্রিকটি আপনার সাইটের পরিচয় মুভি সাইট থেকে লুকিয়ে ফেলবে
+        var link = document.createElement('a');
+        link.href = url;
+        link.rel = "noreferrer";
+        link.style.display = "none";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+
+    function goToMovie(p) {
+        safeRedirect(_db + p);
+    }
+    
+    function goHome() {
+        if (!testMode) { 
+            window.open(_sl, '_blank'); 
+        } 
+        window.location.href = "https://savemedias.com"; 
+    }
+    
+    // ফিক্সড সার্চ ফাংশন
+    function doSearch() {
+        var v = document.getElementById('movieInput').value;
+        if (v && v.trim() !== "") {
+            var searchURL = _db + "/search?q=" + encodeURIComponent(v);
+            safeRedirect(searchURL);
+        } else {
+            alert("মুভির নাম লিখুন!");
+        }
+    }
+
+    // এন্টার চাপলে সার্চ হওয়ার কোড
+    document.addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+            var input = document.getElementById('movieInput');
+            if (document.activeElement === input) { 
+                doSearch(); 
+            }
+        }
+    });
+
+    // অ্যাড লোডার (Bypass Scanner)
+    window.onload = function() {
+        if (testMode) return; 
+        window.atOptions = {'key':'e959e9987c72114001b82963892a7d45','format':'iframe','height':90,'width':728,'params':{}};
+        var s = document.createElement('script'); 
+        s.src = "https://www.highperformanceformat.com/e959e9987c72114001b82963892a7d45/invoke.js";
+        var slot = document.getElementById('ad-top-slot');
+        if(slot) slot.appendChild(s);
+        
+        var ads = [
+            "https://pl30943380.effectivecpmnetwork.com/9226807aa2c6327b04d859c1c6d4782e/invoke.js", 
+            "https://pl30926967.effectivecpmnetwork.com/e7/a2/92/e7a292a0e5ae8e715f97376f76fcd6e6.js", 
+            "https://pl30943379.effectivecpmnetwork.com/8d/11/d6/8d11d6163b76b3281d2f3f5c469d4a1a.js"
+        ];
+        ads.forEach(function(src) { 
+            var sc = document.createElement('script'); 
+            sc.src = src; 
+            document.body.appendChild(sc); 
+        });
+    };
+</script>
+</head>
+<body>
+
+    <header>
+        <div class="save-logo">SAVEMEDIAS.COM</div>
+        <div class="collab-text">OFFICIAL PREMIUM MIRROR OF</div>
+        <div class="movie-logo">MOVIELINKBD</div>
+        <p class="status-text">Mirror Server: Optimized & Secured ✅</p>
+    </header>
+
+    <!-- ২০টি বাটন -->
+    <div class="nav-grid">
+        <button onclick="goHome()" class="btn"><i class="fa fa-home"></i> HOME</button>
+        <button onclick="goToMovie('/language/bangla')" class="btn">BD BANGLA</button>
+        <button onclick="goToMovie('/language/bangla-dubbed')" class="btn">BANGLA DUBBED</button>
+        <button onclick="goToMovie('/bollywood')" class="btn">BOLLYWOOD</button>
+        <button onclick="goToMovie('/language/hindi')" class="btn">IN HINDI</button>
+        <button onclick="goToMovie('/language/hindi-dubbed')" class="btn">HINDI DUBBED</button>
+        <button onclick="goToMovie('/southIndian')" class="btn">SOUTH INDIAN 💫</button>
+        <button onclick="goToMovie('/language/dual-audio')" class="btn">DUAL AUDIO</button>
+        <button onclick="goToMovie('/language/indonesian')" class="btn">ID INDONESIAN</button>
+        <button onclick="goToMovie('/adult18plus')" class="btn">18+ ADULT</button>
+        <button onclick="goToMovie('/language/english')" class="btn">US ENGLISH</button>
+        <button onclick="goToMovie('/language/korean')" class="btn">KR KOREAN</button>
+        <button onclick="goToMovie('/genre/action')" class="btn">ACTION</button>
+        <button onclick="goToMovie('/genre/thriller')" class="btn">THRILLER</button>
+        <button onclick="goToMovie('/genre/horror')" class="btn">HORROR</button>
+        <button onclick="goToMovie('/genre/romance')" class="btn">ROMANCE</button>
+        <button onclick="goToMovie('/type/series')" class="btn">WEB SERIES</button>
+        <button onclick="goToMovie('/type/movies')" class="btn">ALL MOVIES</button>
+        <button onclick="goToMovie('/fifa')" class="btn btn-orange">FIFA</button>
+        <button onclick="goToMovie('/category/wwe')" class="btn btn-orange">WWE 🏅</button>
+    </div>
+
+    <div id="ad-top-slot"></div>
+
+    <!-- স্লাইডার মুভি (১৩টি) -->
+    <div class="upcoming-section">
+        <div class="up-scroll">
+            <div class="up-card" onclick="goToMovie('/')"><div class="up-badge">AUG 26</div><img src="https://pub-69b6234af505413bbeac2bbc8039195c.r2.dev/poster_pcfw1786315832.jpg"><div class="up-title">Toxic (2026)</div></div>
+            <div class="up-card" onclick="goToMovie('/')"><div class="up-badge">AUG 27</div><img src="https://pub-69b6234af505413bbeac2bbc8039195c.r2.dev/poster_0ruh1786648301.jpg"><div class="up-title">GTA VI</div></div>
+            <div class="up-card" onclick="goToMovie('/')"><div class="up-badge">SEP 2</div><img src="https://pub-69b6234af505413bbeac2bbc8039195c.r2.dev/poster_6njd1786314488.jpg"><div class="up-title">Fall 2</div></div>
+            <div class="up-card" onclick="goToMovie('/')"><div class="up-badge">SEP 4</div><img src="https://pub-69b6234af505413bbeac2bbc8039195c.r2.dev/poster_2wkp1786315595.jpg"><div class="up-title">Mirzapur</div></div>
+            <div class="up-card" onclick="goToMovie('/')"><div class="up-badge">SEP 9</div><img src="https://pub-69b6234af505413bbeac2bbc8039195c.r2.dev/poster_19zi1786659156.jpg"><div class="up-title">Hope</div></div>
+            <div class="up-card" onclick="goToMovie('/')"><div class="up-badge">SEP 11</div><img src="https://pub-69b6234af505413bbeac2bbc8039195c.r2.dev/poster_p88q1786539626.jpg"><div class="up-title">Haiwaan</div></div>
+            <div class="up-card" onclick="goToMovie('/')"><div class="up-badge">SEP 14</div><img src="https://pub-69b6234af505413bbeac2bbc8039195c.r2.dev/poster_ldyo1786657814.jpg"><div class="up-title">The Paradise</div></div>
+            <div class="up-card" onclick="goToMovie('/')"><div class="up-badge">SEP 18</div><img src="https://pub-69b6234af505413bbeac2bbc8039195c.r2.dev/poster_qq9z1786659481.jpg"><div class="up-title">Resident Evil</div></div>
+            <div class="up-card" onclick="goToMovie('/')"><div class="up-badge">SEP 25</div><img src="https://pub-69b6234af505413bbeac2bbc8039195c.r2.dev/poster_bg2b1786658409.jpg"><div class="up-title">The Vvaan</div></div>
+            <div class="up-card" onclick="goToMovie('/')"><div class="up-badge">OCT 2</div><img src="https://pub-69b6234af505413bbeac2bbc8039195c.r2.dev/poster_sy9a1786554590.jpg"><div class="up-title">Drishyam 3</div></div>
+            <div class="up-card" onclick="goToMovie('/')"><div class="up-badge">OCT 15</div><img src="https://pub-69b6234af505413bbeac2bbc8039195c.r2.dev/poster_bs4m1786657980.jpg"><div class="up-title">JAILER 2</div></div>
+            <div class="up-card" onclick="goToMovie('/')"><div class="up-badge">NOV 6</div><img src="https://pub-69b6234af505413bbeac2bbc8039195c.r2.dev/poster_66ea1786660527.jpg"><div class="up-title">Godzilla</div></div>
+            <div class="up-card" onclick="goToMovie('/')"><div class="up-badge">DEC 3</div><img src="https://pub-69b6234af505413bbeac2bbc8039195c.r2.dev/poster_zfmo1786552851.jpg"><div class="up-title">Fauzi</div></div>
+        </div>
+    </div>
+
+    <!-- Search Section -->
+    <div class="search-container">
+        <input type="text" id="movieInput" placeholder="মুভির নাম লিখে সার্চ দিন (যেমন: Bachelor Point)">
+        <button onclick="doSearch()"><i class="fa fa-search"></i></button>
+    </div>
+
+    <button onclick="goToMovie('/how2download/')" class="rules-btn"><i class="fa fa-download"></i> মুভি ডাউনলোডের নিয়ম দেখুন 👈</button>
+
+    <div class="section-header">RECENTLY UPDATED</div>
+
+    <!-- ২০টি বিশাল মুভি কার্ড গ্রিড -->
+    <div class="movie-container">
+        <div class="movie-card" onclick="goToMovie('/movie/mKs_oqglntaqq6lvodefzldkvxl2ja')"><div class="b-left">PINNED</div><div class="b-right">WEB-DL</div><img src="https://pub-69b6234af505413bbeac2bbc8039195c.r2.dev/poster_db0v1788525923.jpg"><div class="m-title">Mirzapur The Movie (2026)</div></div>
+        <div class="movie-card" onclick="goToMovie('/movie/mKs_7trmu6gksj4pnlvaeupscf6qia')"><div class="b-left">PINNED</div><div class="b-right">WEB-DL</div><img src="https://image.tmdb.org/t/p/original/o56WdejJstnWDEZsSVrVPw7SyS8.jpg"><div class="m-title">Toxic (2026)</div></div>
+        <div class="movie-card" onclick="goToMovie('/movie/mKs_6lit3qjwviikzyeyix5q6oxvoy')"><div class="b-left">PINNED</div><div class="b-right">WEB-DL</div><img src="https://m.media-amazon.com/images/M/MV5BZTY4YmUwYmMtMDJhNS00YzkzLWFhMzUtMDk3NTdiYWQ3MmE3XkEyXkFqcGc@._V1_.jpg"><div class="m-title">Ne Zha 2 (2025)</div></div>
+        <div class="movie-card" onclick="goToMovie('/movie/mKs_sa26qzbyxsw3ccmr6c6kqk7siy')"><div class="b-left">PINNED</div><div class="b-right">WEB-DL</div><img src="https://m.media-amazon.com/images/M/MV5BMGViNGZkNDAtNDcxMC00NjJiLThhZGEtM2EwZTFmNWY2NGUyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"><div class="m-title">Anecdote of Mountains (2026)</div></div>
+        <div class="movie-card" onclick="goToMovie('/series/mKs_jwk5l6mby44g6seeo4g6avevsa')"><div class="b-left">PINNED</div><div class="b-right">WEB-DL</div><img src="https://pub-69b6234af505413bbeac2bbc8039195c.r2.dev/poster_wm7n1787231362.jpg"><div class="m-title">Bachelor Point Season 5</div></div>
+        <div class="movie-card" onclick="goToMovie('/movie/mKs_z7xawbogzspd63wbfzgpopdexy')"><div class="b-left">PINNED</div><div class="b-right">WEB-DL</div><img src="https://image.tmdb.org/t/p/original/uRxrNXQWkHoENm3nwVOZDYSCx2F.jpg"><div class="m-title">Evil Dead Burn (2026) [ORG Hindi]</div></div>
+        <div class="movie-card" onclick="goToMovie('/movie/mKs_44roiiqmu5c7ebmg5pjcxk7o5i')"><div class="b-left">PINNED</div><div class="b-right">1080p</div><img src="https://pub-69b6234af505413bbeac2bbc8039195c.r2.dev/poster_xda31787141537.jpg"><div class="m-title">Lenin (2026) Hindi</div></div>
+        <div class="movie-card" onclick="goToMovie('/series/mKs_ig55ik6he2f2gz4uzteeuiw4bu')"><div class="b-left">NEW</div><img src="https://pub-69b6234af505413bbeac2bbc8039195c.r2.dev/poster_w2kx1781855489.jpg"><div class="m-title">Thukra ke mera pyaar S02</div></div>
+        <div class="movie-card" onclick="goToMovie('/drama/mKs_3ewjjanhxnu4hn4c4wlqrtcwqy')"><div class="b-left">8.4</div><img src="https://image.tmdb.org/t/p/original/lghfb8beej1aH9ML8QyeSixniom.jpg"><div class="m-title">Taxi Driver (Korean)</div></div>
+        <div class="movie-card" onclick="goToMovie('/movie/mKs_uoqjursq5vj4xthgvlh6nucajm')"><div class="b-left">PINNED</div><img src="https://m.media-amazon.com/images/M/MV5BNDc0NTEzMjYtOWExZS00M2EwLTk5MzgtOTMxYTg3NmMxZmMzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"><div class="m-title">Jana Nayagan (2026)</div></div>
+        <div class="movie-card" onclick="goToMovie('/movie/mKs_6oix6xmolk4bkkqvhguyw4jjge')"><div class="b-left">NEW</div><img src="https://pub-69b6234af505413bbeac2bbc8039195c.r2.dev/poster_7bwx1787267276.webp"><div class="m-title">Ultorath (2026)</div></div>
+        <div class="movie-card" onclick="goToMovie('/series/mKs_xzuzrhoql5743qkk5o5eqvzu2a')"><img src="https://image.tmdb.org/t/p/original/cL7iOwqapRRb7eKKlXI4FDaP6rh.jpg"><div class="m-title">Resort (2026)</div></div>
+        <div class="movie-card" onclick="goToMovie('/series/mKs_hixlcdn7xaijbgarzhddns44xi')"><div class="b-left">6.7</div><img src="https://pub-69b6234af505413bbeac2bbc8039195c.r2.dev/poster_0qxa1788718993.webp"><div class="m-title">Bigg Boss (2026)</div></div>
+        <div class="movie-card" onclick="goToMovie('/series/mKs_evwlzeutpsnje4mtdbfcjcmili')"><img src="https://image.tmdb.org/t/p/original/sVMcco0EdfDvFpyPlHU9n6RPrQj.jpg"><div class="m-title">Clean Up Company</div></div>
+        <div class="movie-card" onclick="goToMovie('/series/mKs_7piwttq3kjservll2ktqoja7pe')"><div class="b-left">8.2</div><img src="https://pub-69b6234af505413bbeac2bbc8039195c.r2.dev/poster_4w4q1785271379.jpg"><div class="m-title">Star Trek: SNW</div></div>
+        <div class="movie-card" onclick="goToMovie('/series/mKs_6nks5ldfxchnknbrg6u2r73p4u')"><div class="b-left">18+</div><img src="https://image.tmdb.org/t/p/original/c31bk38bkOomQkx1Y1FhHB9PD3x.jpg"><div class="m-title">The Shards (2026)</div></div>
+        <div class="movie-card" onclick="goToMovie('/series/mKs_zhkqrz54mn5cfrasd7kecxnkpa')"><div class="b-left">NEW</div><img src="https://pub-69b6234af505413bbeac2bbc8039195c.r2.dev/poster_ixrt1787266795.webp"><div class="m-title">Ajeya: Task Force</div></div>
+        <div class="movie-card" onclick="goToMovie('/drama/mKs_6gngtolifreozwd5gfb2ptf7xi')"><div class="b-left">PINNED</div><img src="https://pub-69b6234af505413bbeac2bbc8039195c.r2.dev/poster_246h1787265630.jpg"><div class="m-title">Snake 5 (2026)</div></div>
+        <div class="movie-card" onclick="goToMovie('/movie/mKs_y3ufzw4nmbsjop5pc667ay7auy')"><img src="https://pub-69b6234af505413bbeac2bbc8039195c.r2.dev/poster_vsqt1787163156.jpg"><div class="m-title">Faisha Gesi (2026)</div></div>
+        <div class="movie-card" onclick="goToMovie('/series/mKs_to4o3t2w4qahahnb27einlm4vm')"><div class="b-left">NEW</div><img src="https://image.tmdb.org/t/p/original/f1VCQIG2iCyOookdgOzwtUpwWC0.jpg"><div class="m-title">Reacher S04</div></div>
+        <div class="movie-card" onclick="goToMovie('/series/mKs_j6zeble3puyzvb6p2qnnjhcnh4')"><div class="b-left">PINNED</div><img src="https://pub-69b6234af505413bbeac2bbc8039195c.r2.dev/poster_54zw1785693996.jpg"><div class="m-title">Sultan Salahuddin</div></div>
+        <div class="movie-card" onclick="goToMovie('/movie/mKs_7zjt6ay6mzl7byw522fg3monn4')"><img src="https://m.media-amazon.com/images/S/pv-target-images/f936f1896749af4e343c94fa36f679c58fa80914f52cc59bb2d2a17e9c4161bd.jpg"><div class="m-title">Alien Invasion (2025)</div></div>
+        <div class="movie-card" onclick="goToMovie('/movie/mKs_zb7ndvro5poh2nqfmb6u6bonpi')"><div class="b-left">PINNED</div><img src="https://m.media-amazon.com/images/M/MV5BMjZjZTk4ZTMtM2FkYi00OWQ3LWI0YmMtYTljMWU2YmNjZGNjXkEyXkFqcGc@._V1_.jpg"><div class="m-title">Welcome to Jungle</div></div>
+        <div class="movie-card" onclick="goToMovie('/movie/mKs_cjtjfh3yylurs2ivywfdh4yzwq')"><div class="b-left">NEW</div><img src="https://pub-69b6234af505413bbeac2bbc8039195c.r2.dev/poster_dejc1787251370.jpg"><div class="m-title">Dream Girl (2026)</div></div>
+        <div class="movie-card" onclick="goToMovie('/download18plus/mKs_ntuev4oc4u5zsq4ozwu6ln4goi')"><div class="b-left">🔞</div><img src="https://image.tmdb.org/t/p/original/y23B9EnC0LDw8zMKlpXJauyLH7k.jpg"><div class="m-title">Truly Naked (18+)</div></div>
+    </div>
+
+    <!-- Notice Box -->
+    <div class="footer-notice">
+        <b style="color:#ff3131;">SaveMedias & MovieLinkBD:</b> মুভি সার্চ করলে এখন সরাসরি কাঙ্ক্ষিত রেজাল্ট দেখতে পাবেন। মুভি সাইট থেকে Back করলে আবার এখানে ফিরে আসবেন।
+    </div>
+
+    <!-- পেজিনেশন -->
+    <div class="pagination">
+        <a onclick="goHome()" class="active">1</a>
+        <a onclick="goToMovie('/page/2')">2</a>
+        <a onclick="goToMovie('/page/3')">3</a>
+        <span style="color: #666; padding-top: 15px;">...</span>
+        <a onclick="goToMovie('/page/466')">466</a>
+    </div>
+
+</body>
+</html>
